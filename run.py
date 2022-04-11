@@ -19,3 +19,23 @@ def selectPlayerLetter():
     else:
         return ["O", "X"]
 
+
+def theBoard(board):
+    # This prints out the board.
+    # "board" is a list of 10 strings (ignoring index 0).
+
+    print(board[7] + '|' + board[8] + '|' + board[9])
+    print('-+-+-')
+    print(board[4] + '|' + board[5] + '|' + board[6])
+    print('-+-+-')
+    print(board[1] + '|' + board[2] + '|' + board[3])
+
+
+def firstMove():
+    # Chooses which player goes first
+    if random.randint(0, 1) == 0:
+        return "Computer"
+    else:
+        return "Player"
+
+        
