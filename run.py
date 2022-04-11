@@ -88,3 +88,20 @@ def makeRandomMove(board, moveList):
         return random.choice(potentialMoves)
     else:
         return None
+
+def computerMove(board, computerLetter):
+    # Determines where to return a move given the board and computers letter
+    if computerLetter == "X":
+        playerLetter = "O"
+    else:
+        playerLetter = "X"
+
+    # Algorithm for Tic-Tac-Toe AI:
+    # Checks if computer can win in next move
+    for i in range(1, 10):
+        boardCopy = copyBoard(board)
+        if freeSpace(boardCopy, i):
+            makeMove(boardCopy, computerLetter, i)
+            if Winner(boardCopy, computerLetter):
+                return i
+                
