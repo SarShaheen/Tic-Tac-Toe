@@ -3,6 +3,7 @@
 
 import random
 
+print("Welcome To Tic-Tac-Toe!")
 
 def selectPlayerLetter():
     # Let's the player pick what letter they want to be.
@@ -20,7 +21,7 @@ def selectPlayerLetter():
         return ["O", "X"]
 
 
-def theBoard(board):
+def createBoard(board):
     # This prints out the board.
     # "board" is a list of 10 strings (ignoring index 0).
 
@@ -124,5 +125,37 @@ def computerMove(board, computerLetter):
 
     # Moves on one of the sides
     return makeRandomMove(board, [2, 4, 6, 8])
-    
 
+def boardFull(board):
+    # If all spaces are taken, returns true otherwise returns false
+    for i in range(1, 10):
+        if freeSpace(board, i):
+            return False
+    return True
+
+while True:
+    # Resets the board
+    theBoard = [" "] * 10
+    playerLetter, computerLetter = inputPlayerLetter()
+    turn = firstMove()
+    print("The " + turn + " will go first.")
+    playingGame = True
+
+    while playingGame:
+        if turn == "player":
+            # players turn
+            createBoard(theBoard)
+            move = playerMove(theBoard)
+            makeMove(theBoard, layerLetter, move)
+
+            if Winner(theBoard, playerLetter):
+                createBoard(theBoard)
+                print("Yay! You have won!")
+                playingGame = False
+            else:
+                if boardFull(theBoard):
+                    createBoard(theBoard)
+                    print("The game is a tie!")
+                    break
+                else:
+                    turn = "computer"
