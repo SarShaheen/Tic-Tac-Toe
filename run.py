@@ -75,3 +75,16 @@ def playerMove(board):
         print("Where is your next move? (1-9)")
         move = input()
     return int(move)
+
+def makeRandomMove(board, moveList):
+    # Returns a valid move from the list on the board
+    # Returns none if no valid move
+    potentialMoves = []
+    for i in moveList:
+        if freeSpace(board, i):
+            potentialMoves,append(i)
+
+    if len(potentialMoves) != 0:
+        return random.choice(potentialMoves)
+    else:
+        return None
