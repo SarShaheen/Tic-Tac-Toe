@@ -62,4 +62,16 @@ def copyBoard(board):
     boardCopy = []
     for i in board:
         boardCopy.append(i)
-    ret boardCopy
+    return boardCopy
+
+def freeSpace(board, move):
+    # If space is free on the board, returns true
+    return board[move] == " "
+
+def playerMove(board):
+    # Let's player make their move
+    move = " "
+    while move not in "1 2 3 4 5 6 7 8 9".split() or not freeSpace(board, int(move)):
+        print("Where is your next move? (1-9)")
+        move = input()
+    return int(move)
