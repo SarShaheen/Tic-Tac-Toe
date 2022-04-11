@@ -111,5 +111,18 @@ def computerMove(board, computerLetter):
         if freeSpace(boardCopy, i):
             makeMove(boardCopy, playerLetter, i)
             if Winner(boardCopy, playerLetter):
-                return i       
+                return i
+
+    # Checks if one of the corners is free to move to
+    move = makeRandomMove(board, [1, 3, 7, 9])
+    if move != None:
+        return move
+
+    # Checks if center is free to move to
+    if freeSpace(board, 5):
+        return 5
+
+    # Moves on one of the sides
+    return makeRandomMove(board, [2, 4, 6, 8])
+    
 
