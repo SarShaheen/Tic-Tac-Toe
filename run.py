@@ -57,3 +57,9 @@ def Winner(board, letter):
     (board[9] == letter and board[5] == letter and board[1] == letter))
 
 
+def copyBoard(board):
+    # Copys board list and returns it
+    boardCopy = []
+    for i in board:
+        boardCopy.append(i)
+    ret boardCopy
