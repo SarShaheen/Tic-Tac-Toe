@@ -38,4 +38,22 @@ def firstMove():
     else:
         return "Player"
 
-        
+
+def makeMove(board, letter, move):
+    board[move] = letter
+
+
+def Winner(board, letter):
+    # Function returns true if given board and players letter,
+    # that player has won.
+    return ((board[7] == letter and board[8] == letter and board[9] == letter
+     or
+    (board[4] == letter and board[5] == letter and board[6] == letter) or
+    (board[1] == letter and board[2] == letter and board[3] == letter) or
+    (board[7] == letter and board[4] == letter and board[1] == letter) or
+    (board[8] == letter and board[5] == letter and board[2] == letter) or
+    (board[9] == letter and board[6] == letter and board[3] == letter) or
+    (board[7] == letter and board[5] == letter and board[3] == letter) or
+    (board[9] == letter and board[5] == letter and board[1] == letter))
+
+
