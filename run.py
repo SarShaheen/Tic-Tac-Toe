@@ -159,3 +159,19 @@ while True:
                     break
                 else:
                     turn = "computer"
+
+        else:
+            # Computers turn
+            move = computerMove(theBoard, computerLetter)
+            makeMove(theBoard, computerLetter, move)
+
+            if Winner(theBoard, computerLetter):
+                createBoard(theBoard)
+                print("The computer has won, you lose!")
+                playingGame = False
+            else:
+                turn = "player"
+
+    print("Do you want to play again? (yes or no)")
+    if not input().lower().startswith("y"):
+        break
