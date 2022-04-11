@@ -104,4 +104,12 @@ def computerMove(board, computerLetter):
             makeMove(boardCopy, computerLetter, i)
             if Winner(boardCopy, computerLetter):
                 return i
-                
+
+    # Checks if player can win in next move and block the computer
+    for i in range(1, 10):
+        boardCopy = copyBoard(board)
+        if freeSpace(boardCopy, i):
+            makeMove(boardCopy, playerLetter, i)
+            if Winner(boardCopy, playerLetter):
+                return i       
+
