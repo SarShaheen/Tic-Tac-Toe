@@ -2,7 +2,9 @@
 
 import random
 
-print("Welcome To Tic-Tac-Toe!")
+print("\nWelcome To Tic-Tac-Toe!\n")
+
+print("RULES: The spaces on the board are laid out as your keyboards number pad.\n Using the numbers 1 - 9, you may place your character on the board until\n one of you gets 3 in a row.\n")
 
 
 def select_player_letter():
@@ -12,7 +14,7 @@ def select_player_letter():
 
     letter = " "
     while not (letter == 'X' or letter == 'O'):
-        print("Do you want to be X or O?")
+        print("Do you want to be X or O?\n")
         letter = input().upper()
 
     if letter == 'X':
