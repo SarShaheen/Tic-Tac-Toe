@@ -75,7 +75,7 @@ def player_move(board):
     move = ' '
     while move not in '1 2 3 4 5 6 7 8 9'.split() \
             or not space_free(board, int(move)):
-        print('What is your next move? (1-9)')
+        print('Where is your next move? (1-9)')
         move = input()
     return int(move)
 
@@ -140,7 +140,7 @@ while True:
     theBoard = [' '] * 10
     player_letter_one, computer_letter_one = input_player_letter()
     TURN = who_goes_first()
-    print('The ' + TURN + ' will go first.')
+    print('The ' + TURN + ' will make the first move.')
     PLAYING_GAME = True
     while PLAYING_GAME:
         if TURN == 'player':
