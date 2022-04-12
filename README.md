@@ -2,10 +2,9 @@
 
 Tic-Tac-Toe is a Python terminal game played against a computer with one player being X whilst the other is O. Players take turns placing their X or O on the board until one player gets three of their marks in a row, column, or diagonal, making them the winner. If neither player gets three marks in any direction, the game ends in a draw.
 
-Link to game - <a href=" " target="blank" rel="noopener" aria-label="Visit Tic Tac Toe (Opens in a new tab)"> Click Here!</a>
+Link to game - <a href="https://tic-tac-toe-o.herokuapp.com/" target="blank" rel="noopener" aria-label="Visit Tic Tac Toe (Opens in a new tab)"> Click Here!</a>
 
-![Screenshot]()
-
+![Screenshot](mockup.png)
 ## User Stories
 
 As a user, i want to be able to:
@@ -24,13 +23,13 @@ The start up page displays an introduction to the game and instructions on how t
 
 The instructions are made clear so the user can understand how the game works and which controls to use.
 
-![Screenshot]()
+![Screenshot](start-up-page.png)
 
 - __Playing The Game__
 
 When the game is in progress, the Python code will begin to run and either the user or computer will be prompted to make the first move. It will then keep running and asking the user for input on where they would like to place their character until one of the players achieve three in a row or draw.
 
-![Screenshot]()
+![Screenshot](playing-game.png)
 
 ## Testing
 
