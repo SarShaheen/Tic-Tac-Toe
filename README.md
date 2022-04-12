@@ -57,11 +57,11 @@ I came across a bug where i wasn't able to run an `if` statement to check if one
 
 ### Validator Testing
 
-- __Python__
+- __PEP8__
 
-I can confirm no errors are returned after passing ...
+I can confirm no errors are returned after passing the PEP8online checker
 
-![Screenshot]()
+![Screenshot](PEP8-Checker.png)
 
 
 ### Unfixed Bugs
