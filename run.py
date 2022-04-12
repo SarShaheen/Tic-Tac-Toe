@@ -48,13 +48,13 @@ def is_winner(brd, letter):
     that player has won.
     """
     return ((brd[7] == letter and brd[8] == letter and brd[9] == letter) or
-    (brd[4] == letter and brd[5] == letter and brd[6] == letter) or
-    (brd[1] == letter and brd[2] == letter and brd[3] == letter) or
-    (brd[7] == letter and brd[4] == letter and brd[1] == letter) or
-    (brd[8] == letter and brd[5] == letter and brd[2] == letter) or
-    (brd[9] == letter and brd[6] == letter and brd[3] == letter) or
-    (brd[7] == letter and brd[5] == letter and brd[3] == letter) or
-    (brd[9] == letter and brd[5] == letter and brd[1] == letter))
+            (brd[4] == letter and brd[5] == letter and brd[6] == letter) or
+            (brd[1] == letter and brd[2] == letter and brd[3] == letter) or
+            (brd[7] == letter and brd[4] == letter and brd[1] == letter) or
+            (brd[8] == letter and brd[5] == letter and brd[2] == letter) or
+            (brd[9] == letter and brd[6] == letter and brd[3] == letter) or
+            (brd[7] == letter and brd[5] == letter and brd[3] == letter) or
+            (brd[9] == letter and brd[5] == letter and brd[1] == letter))
 
 
 def get_board_copy(board):
@@ -74,7 +74,7 @@ def player_move(board):
     """ Let the player enter their move."""
     move = ' '
     while move not in '1 2 3 4 5 6 7 8 9'.split() \
-    or not space_free(board, int(move)):
+            or not space_free(board, int(move)):
         print('What is your next move? (1-9)')
         move = input()
     return int(move)
@@ -138,7 +138,7 @@ print('one of you gets 3 in a row.\n')
 while True:
     # Reset the board.
     theBoard = [' '] * 10
-    player_letter, computer_letter = input_player_letter()
+    player_letter_one, computer_letter_one = input_player_letter()
     TURN = who_goes_first()
     print('The ' + TURN + ' will go first.')
     PLAYING_GAME = True
@@ -146,9 +146,9 @@ while True:
         if TURN == 'player':
             # Player's turn
             draw_board(theBoard)
-            move = player_move(theBoard)
-            make_move(theBoard, player_letter, move)
-            if is_winner(theBoard, player_letter):
+            MOVE = player_move(theBoard)
+            make_move(theBoard, player_letter_one, MOVE)
+            if is_winner(theBoard, player_letter_one):
                 draw_board(theBoard)
                 print('Yay! You have won the game!')
                 PLAYING_GAME = False
@@ -161,9 +161,9 @@ while True:
                     TURN = 'computer'
         else:
             # Computer's turn
-            move = computer_move(theBoard, computer_letter)
-            make_move(theBoard, computer_letter, move)
-            if is_winner(theBoard, computer_letter):
+            move_comp = computer_move(theBoard, computer_letter_one)
+            make_move(theBoard, computer_letter_one, move_comp)
+            if is_winner(theBoard, computer_letter_one):
                 draw_board(theBoard)
                 print('The computer has won! You lose.')
                 PLAYING_GAME = False
