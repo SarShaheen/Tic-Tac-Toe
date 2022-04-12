@@ -53,7 +53,7 @@ I have made sure that the game ends correctly and displays the winner according 
 
 ### Bugs
 
-I came across a bug where i wasn't able to run an `if` statement to check if one of the players have completed 3 in a row, it was continually throwing an error. After speaking to a tutor at Code Institute, i managed to see where i was going wrong and didn't need the additional brackets within the statement. Once i removed them, the code was running as it should. 
+I came across a bug where i wasn't able to check if one of the players have completed 3 in a row, it was continually throwing an error with the `return` statement. After speaking to a tutor at Code Institute, i found that i didn't need the additional brackets within the statement. Once i removed them, the code was running as it should. 
 
 ### Validator Testing
 
