@@ -2,8 +2,8 @@ import random
 
 
 def draw_board(board):
-    """ Function prints out the board it was passed.
-    'board' is a list of 10 strings representing the board.
+    """
+    'board' is a list of strings representing the board display.
     """
     print(board[7] + '|' + board[8] + '|' + board[9])
     print('-+-+-')
