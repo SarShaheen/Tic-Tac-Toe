@@ -33,7 +33,7 @@ When the game is in progress, the Python code will begin to run and either the u
 
 ## Testing
 
-I have tested this game in different browsers to ensure it works with Chrome,Safari etc...
+I have tested this game in different browsers to ensure it works with Chrome and Firefox.
 
 I have ensured this project is responsive and functional.
 
